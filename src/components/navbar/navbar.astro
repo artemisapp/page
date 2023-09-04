@@ -90,6 +90,13 @@ const langRoutes = astroI18n.langCodes
           }
         </ul>
         <div class="lg:hidden flex items-center mt-3 gap-4">
+          {
+            langRoutes.map((langRoute) => (
+              <a href={langRoute.route}>
+                <Icon class="text-black w-6 h-6 me-2" name={langRoute.flagIcon} />
+              </a>
+            ))
+          }
           <Link
             href="https://github.com/ls1intum/Artemis"
             target="_blank"

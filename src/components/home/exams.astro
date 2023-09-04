@@ -58,7 +58,7 @@ import { t } from "astro-i18n";
     <h2 class="font-semibold text-xl mt-16 w-100 text-center">
       {t("examMode.statistics.title")}
     </h2>
-    <div class="w-full mt-8 flex gap-16">
+    <div class="w-full mt-8 flex gap-16 flex-col lg:flex-row">
       <div class="flex gap-16 flex-1 items-center justify-center">
         <Picture
           src={examStatsImage}
@@ -84,7 +84,7 @@ import { t } from "astro-i18n";
     <h2 class="font-semibold text-xl mt-16 w-100 text-center">
       {t("examMode.automaticAssessment.title")}
     </h2>
-    <div class="w-full mt-8 flex gap-16">
+    <div class="w-full mt-8 flex gap-16 flex-col lg:flex-row">
       <div class="flex-1 flex flex-col gap-4">
         <p class="text-slate-200 leading-relaxed">
           {t("examMode.automaticAssessment.description")}

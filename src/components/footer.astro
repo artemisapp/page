@@ -1,0 +1,23 @@
+---
+import { t } from "astro-i18n";
+---
+<footer class="my-20">
+  <p class="text-center text-sm text-slate-500">
+    Copyright © {new Date().getFullYear()} {t("footer.copyright")}
+  </p>
+  <p class="text-center text-xs text-slate-500 mt-1">
+    {t("footer.madeby")} <a
+    href="https://github.com/bassner"
+    target="_blank"
+    rel="noopener"
+    class="hover:underline font-bold">
+    @bassner
+  </a>
+  </p>
+  <p class="text-center text-xs text-slate-500 mt-4 hover:text-slate-200 underline">
+    <a href="https://ase.cit.tum.de/impressum/" target="_blank" rel="noopener">
+      {t("footer.imprint")}
+    </a>
+  </p>
+
+</footer>

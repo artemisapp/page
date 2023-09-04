@@ -1,0 +1,43 @@
+---
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Layout from "@layouts/Layout.astro";
+import Icon from "astro-icon";
+import { t } from "astro-i18n";
+---
+
+<Layout title={t("contact.title")}>
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">{t("contact.title")}</Fragment>
+      <Fragment slot="desc"> {t("contact.subtitle")}</Fragment>
+    </Sectionhead>
+    <div class="flex flex-col justify-center items-center mt-24 gap-2">
+      <Icon name="fluent:mail-24-regular" class="w-16 h-16 text-primary-500" />
+      <p>
+        {t("contact.email")}
+      </p>
+      <!-- mailto link artemis@xcit.tum.de -->
+      <a href="mailto:artemis@xcit.tum.de" class="text-blue-500 text-lg">artemis@xcit.tum.de</a>
+    </div>
+    <div class="flex gap-16 justify-center mt-24">
+      <div class="flex flex-col justify-center items-center flex-wrap gap-2">
+        <Icon name="ri:bug-fill" class="w-16 h-16 text-primary-500" />
+        <p>
+          {t("contact.bug")}
+        </p>
+        <a href="https://github.com/ls1intum/Artemis/issues/new?projects=ls1intum/1&labels=bug&template=bug-report.yml"
+           class="text-blue-500 text-lg">GitHub</a>
+      </div>
+      <div class="flex flex-col justify-center items-center gap-2">
+        <Icon name="iconoir:suggestion" class="w-16 h-16 text-primary-500" />
+        <p>
+          {t("contact.feature")}
+        </p>
+        <a
+          href="https://github.com/ls1intum/Artemis/issues/new?projects=ls1intum/1&labels=feature&template=feature-request.yml"
+          class="text-blue-500 text-lg">GitHub</a>
+      </div>
+    </div>
+  </Container>
+</Layout>

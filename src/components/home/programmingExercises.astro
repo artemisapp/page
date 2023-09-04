@@ -1,0 +1,148 @@
+---
+import Icon from "astro-icon";
+import OnVisibleWrapper from "../ui/eyecandy/OnVisibleWrapper.astro";
+import Container from "../container.astro";
+import screenImage from "../../assets/editor.png";
+import { Picture } from "@astrojs/image/components";
+import Glowbar from "../ui/eyecandy/glowbar.astro";
+import logoImage from "../../assets/logo.png";
+import { t } from "astro-i18n";
+---
+
+<style>
+    .prog-ex-wrapper .pgex-cnt > * {
+        transition: all 0.5s ease-in-out;
+        opacity: 0.5;
+        transform: translateY(20px);
+    }
+
+    .prog-ex-wrapper.visible .pgex-cnt > * {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .pg-img {
+        mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    }
+</style>
+
+<OnVisibleWrapper class="prog-ex-wrapper mt-24" id="programming-exercises">
+  <Glowbar />
+  <Container class="pgex-cnt">
+    <div class="pt-16 md:mt-0 text-center prog-ex-header">
+      <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+        {t("programmingExercises.header.title")}
+      </h2>
+      <p class="text-lg mt-4 text-slate-300">
+        {t("programmingExercises.header.subtitle")}
+      </p>
+    </div>
+
+    <div class="mt-16 -mb-18 pg-img">
+      <Picture
+        src={screenImage}
+        placeholder="dominant-color"
+        alt={t("programmingExercises.imageAlt")}
+        widths={[1920]}
+        sizes="(max-width: 800px) 100vw, 80%"
+        loading="eager"
+        format="avif"
+        class="rounded-xl shadow-xl"
+      />
+    </div>
+
+    <p class="text-slate-200 leading-relaxed text-center text-2xl me-8 ms-8">
+      {t("programmingExercises.description")}
+    </p>
+  </Container>
+</OnVisibleWrapper>
+
+<OnVisibleWrapper class="prog-ex-wrapper mt-24">
+  <Container class="pgex-cnt">
+    <h2 class="font-semibold text-xl mt-16 w-100 text-center">
+      {t("programmingExercises.integration.title")}
+    </h2>
+    <div class="w-full mt-8 flex gap-16">
+      <div class="flex-1 flex flex-col gap-4">
+        <p class="text-slate-200 leading-relaxed">
+          {t("programmingExercises.integration.description")}
+        </p>
+        <p class="text-slate-200">
+          {t("programmingExercises.integration.platforms")}
+        </p>
+        <p class="text-slate-200 mt-4">
+          {t("programmingExercises.integration.standalone")}
+        </p>
+      </div>
+      <div class="flex flex-col gap-4 flex-1">
+        <div class="flex justify-between items-center ps-4 pe-4">
+          <h2 class="font-bold">Atlassian Suite</h2>
+          <div class="flex h-12 gap-8">
+            <Icon name="simple-icons:jira" />
+            <Icon name="simple-icons:bamboo" />
+            <Icon name="simple-icons:bitbucket" />
+            <Picture src={logoImage} alt="Artemis" widths={[40, 80]} sizes="55px" />
+          </div>
+        </div>
+        <div class="flex justify-between items-center ps-4 pe-4">
+          <h2 class="font-bold">GitLab + Jenkins</h2>
+          <div class="flex h-12 gap-8">
+            <Icon name="simple-icons:jenkins" />
+            <Icon name="simple-icons:gitlab" />
+            <Picture src={logoImage} alt="Artemis" widths={[40, 80]} sizes="55px" />
+          </div>
+        </div>
+        <div class="flex justify-between items-center ps-4 pe-4">
+          <h2 class="font-bold">GitLab CI</h2>
+          <div class="flex h-12 gap-8">
+            <Icon name="simple-icons:gitlab" />
+            <Picture src={logoImage} alt="Artemis" widths={[40, 80]} sizes="55px" />
+          </div>
+        </div>
+        <div class="flex justify-between items-center ps-4 pe-4">
+          <h2 class="font-bold">Standalone</h2>
+          <div class="flex h-12 gap-8">
+            <Picture src={logoImage} alt="Artemis" widths={[40, 80]} sizes="55px" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="font-semibold text-xl mt-16 w-100 text-center">
+      {t("programmingExercises.assessment.title")}
+    </h2>
+    <div class="w-full mt-8 flex gap-16">
+      <div class="flex gap-16 flex-1 items-center justify-center">
+        <Icon class="h-24" name="simple-icons:pytest" />
+        <Icon class="h-24" name="simple-icons:junit5" />
+        <div class="text-4xl font-bold">ARES</div>
+      </div>
+      <div class="flex-1 flex flex-col gap-4">
+        <p class="text-slate-200 leading-relaxed">
+          {t("programmingExercises.assessment.description")}
+        </p>
+        <p class="text-slate-200">
+          {t("programmingExercises.assessment.automate")}
+        </p>
+        <p class="text-slate-200 mt-4">
+          {t("programmingExercises.assessment.scale")}
+        </p>
+      </div>
+    </div>
+  </Container>
+
+  <div class="mt-24">
+    <h2 class="text-center text-slate-300">
+      {t("programmingExercises.programmingLanguages")}
+    </h2>
+    <div class="flex gap-8 md:gap-20 items-center justify-center mt-10 flex-wrap">
+      <Icon class="h-8 md:h-12" name="simple-icons:java" />
+      <Icon class="h-8 md:h-12" name="simple-icons:swift" />
+      <Icon class="h-8 md:h-12" name="simple-icons:kotlin" />
+      <Icon class="h-8 md:h-12" name="simple-icons:python" />
+      <Icon class="h-8 md:h-14" name="simple-icons:c" />
+      <Icon class="h-8 md:h-16" name="simple-icons:ocaml" />
+      <Icon class="h-8 md:h-16" name="simple-icons:haskell" />
+    </div>
+  </div>
+</OnVisibleWrapper>

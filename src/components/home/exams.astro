@@ -1,0 +1,113 @@
+---
+import OnVisibleWrapper from "../ui/eyecandy/OnVisibleWrapper.astro";
+import Container from "../container.astro";
+import examParticipateImage from "../../assets/exam-participate.png";
+import examStatsImage from "../../assets/exam-stats.jpg";
+import examAssessmentImage from "../../assets/exam-assessment.png";
+import { Picture } from "@astrojs/image/components";
+import Glowbar from "../ui/eyecandy/glowbar.astro";
+import { t } from "astro-i18n";
+---
+
+<style>
+    .exam-wrapper .exam-content > * {
+        transition: all 0.5s ease-in-out;
+        opacity: 0.5;
+        transform: translateY(20px);
+    }
+
+    .exam-wrapper.visible .exam-content > * {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .exam-img {
+        mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    }
+</style>
+
+<OnVisibleWrapper class="exam-wrapper mt-24" id="exams">
+  <Glowbar />
+  <Container class="exam-content">
+    <div class="pt-16 md:mt-0 text-center exam-header">
+      <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+        {t("examMode.header.title")}
+      </h2>
+      <p class="text-lg mt-4 text-slate-300">
+        {t("examMode.header.subtitle")}
+      </p>
+    </div>
+
+    <div class="mt-16 -mb-18 exam-img">
+      <Picture
+        src={examParticipateImage}
+        placeholder="dominant-color"
+        alt={t("examMode.imageAlt")}
+        widths={[1920]}
+        sizes="(max-width: 800px) 100vw, 80%"
+        loading="eager"
+        format="avif"
+        class="rounded-xl shadow-xl"
+      />
+    </div>
+
+    <p class="text-slate-200 leading-relaxed text-center text-2xl me-8 ms-8">
+      {t("examMode.description")}
+    </p>
+
+    <h2 class="font-semibold text-xl mt-16 w-100 text-center">
+      {t("examMode.statistics.title")}
+    </h2>
+    <div class="w-full mt-8 flex gap-16">
+      <div class="flex gap-16 flex-1 items-center justify-center">
+        <Picture
+          src={examStatsImage}
+          placeholder="dominant-color"
+          alt={t("examMode.statsImageAlt")}
+          widths={[1920]}
+          sizes="(max-width: 800px) 100vw, 100%"
+          loading="eager"
+          format="avif"
+          class="rounded-lg shadow-xl"
+        />
+      </div>
+      <div class="flex-1 flex flex-col gap-4">
+        <p class="text-slate-200 leading-relaxed">
+          {t("examMode.statistics.description")}
+        </p>
+        <p class="text-slate-200">
+          {t("examMode.statistics.usingMetrics")}
+        </p>
+      </div>
+    </div>
+
+    <h2 class="font-semibold text-xl mt-16 w-100 text-center">
+      {t("examMode.automaticAssessment.title")}
+    </h2>
+    <div class="w-full mt-8 flex gap-16">
+      <div class="flex-1 flex flex-col gap-4">
+        <p class="text-slate-200 leading-relaxed">
+          {t("examMode.automaticAssessment.description")}
+        </p>
+        <p class="text-slate-200">
+          {t("examMode.automaticAssessment.automate")}
+        </p>
+        <p class="text-slate-200 mt-4">
+          {t("examMode.automaticAssessment.quality")}
+        </p>
+      </div>
+      <div class="flex gap-16 flex-1 items-center justify-center">
+        <Picture
+          src={examAssessmentImage}
+          placeholder="dominant-color"
+          alt={t("examMode.assessmentImageAlt")}
+          widths={[1920]}
+          sizes="(max-width: 800px) 100vw, 100%"
+          loading="eager"
+          format="avif"
+          class="rounded-lg shadow-xl"
+        />
+      </div>
+    </div>
+  </Container>
+</OnVisibleWrapper>

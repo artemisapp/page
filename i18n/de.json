@@ -1,0 +1,137 @@
+{
+  "navbar": {
+    "features": "Features",
+    "programmingExercises": "Programmieraufgaben",
+    "exams": "Klausuren",
+    "team": "Unser Team",
+    "contact": "Kontaktieren Sie uns"
+  },
+  "hero": {
+    "title": "Interaktives Lernen",
+    "title2": "mit individuellem Feedback",
+    "description": "Artemis belebt interaktives Lernen mit sofortigem, individuellem Feedback zu Programmieraufgaben, Quizzen, Modellierungsaufgaben und mehr. Mit Anpassungsmöglichkeiten für Lehrer und Echtzeit-Zusammenarbeit für Studenten überbrückt diese Plattform Kreativität und Bildung. Umarme eine neue Ära des ansprechenden, adaptiven Lernens mit Artemis, wo Innovation auf Inklusivität trifft.",
+    "subtitle": "Artemis ist Open-Source. Erleben Sie die Zukunft exzellenter Bildung.",
+    "github": "Auf GitHub anzeigen",
+    "getInTouch": "Kontakt aufnehmen"
+  },
+  "features": {
+    "title": "Innovative Technologie trifft auf Bildungsforschung",
+    "subtitle": "Artemis vereint Spitzentechnologie und neueste Forschungsergebnisse, um ein beispielloses interaktives Lernerlebnis zu bieten.",
+    "list": {
+      "0": {
+        "title": "Anpassbare Programmieraufgaben",
+        "description": "Erlebe eine nahtlose Integration von Versionskontrolle, automatischem Feedback und kontinuierlicher Bewertung für eine Vielzahl von Programmiersprachen."
+      },
+      "1": {
+        "title": "Sichere und flexible Klausuren",
+        "description": "Erstelle Online-Klausur mit Übungsvarianten, integrierten Plagiatskontrollen und strukturierten Bewertungskriterien für eine umfassende Auswertung."
+      },
+      "2": {
+        "title": "Interaktives Lernen mit KI",
+        "description": "Nutze die Leistungsfähigkeit der neuesten GPT/LLM-Modelle, um Hinweise und Feedback zu bereichern und das Lernen wirklich interaktiv zu gestalten."
+      },
+      "3": {
+        "title": "Modellierungs- und Textaufgaben",
+        "description": "Nutze eine Vielzahl von Modellierungsaufgaben auf Basis von UML-Diagrammen und Textaufgaben, die durch maschinelles Lernen und NLP bewertet werden."
+      },
+      "4": {
+        "title": "Umfassende Vorlesungen",
+        "description": "Lade Vorlesungsfolien hoch, integriere Videositzungen und gestalte aufeinanderfolgende Einheiten mit Aufgaben für ein vollständiges Lernerlebnis."
+      },
+      "5": {
+        "title": "Interaktive Kommunikation",
+        "description": "Beteilige dich an Studenten und Fakultät durch Q&A-Foren, Chats pro Vorlesung und Übung sowie anpassbare Benachrichtigungen."
+      },
+      "6": {
+        "title": "Vielschichtige Bewertung",
+        "description": "Von Quizzen bis zu Modellierungsaufgaben bietet Artemis eine vielfältige Auswahl an Bewertungstypen, unterstützt durch maschinelles Lernen und NLP-Technologien."
+      },
+      "7": {
+        "title": "Adaptive Lernpfade",
+        "description": "Ermögliche es den Studenten, ihren Fortschritt durch anpassbare Lernziele und Kompetenzverfolgung zu überwachen."
+      },
+      "8": {
+        "title": "Open-Source und skalierbar",
+        "description": "Werde Teil eines community-getriebenen Projekts, das sich an die Bedürfnisse von Kursen mit Tausenden von Studenten anpasst, während es kostenlos bleibt."
+      }
+    }
+  },
+  "programmingExercises": {
+    "header": {
+      "title": "Programmieraufgaben: Der Kern von Artemis",
+      "subtitle": "Maßgeschneidertes Feedback und kontinuierliche Bewertung in mehreren Sprachen"
+    },
+    "imageAlt": "Artemis Editor-Ansicht",
+    "description": "Artemis bietet einen umfassenden Rahmen für Programmieraufgaben. Es integriert sich mit Versionskontrollsystemen und bietet automatisches Feedback auf Basis von Testfällen und statischer Codeanalyse. Mit Unterstützung für mehrere Sprachen ist Artemis die ideale Lösung für eine vielfältige Auswahl an Kursen.",
+    "integration": {
+      "title": "Nahtlose Integration mit Ihren CI/CD-Tools",
+      "description": "Artemis integriert sich mühelos in beliebte CI/CD-Plattformen, um Ihren bestehenden Workflow zu ergänzen.",
+      "platforms": "Wähle aus einer Vielzahl von unterstützten Plattformen, einschließlich GitHub, Bitbucket, GitLab, Jira, Bamboo und Jenkins.",
+      "standalone": "Oder nutze einfach Artemis als eigenständige Lösung - es liegt an dir!"
+    },
+    "assessment": {
+      "title": "Automatisierte Bewertung",
+      "description": "Studenten erhalten sofortiges, automatisiertes, individuelles Feedback durch Testergebnisse, statische Codeanalyse und KI-Empfehlungen.",
+      "automate": "Vergiss das manuelle Bewerten von Hunderten von Einsendungen - Artemis gibt dir die Werkzeuge, um den Prozess zu automatisieren.",
+      "scale": "Skaliere deinen Kurs auf Tausende von Studenten, ohne an Qualität zu verlieren."
+    },
+    "programmingLanguages": "Funktioniert mit allen Programmiersprachen, wie zum Beispiel"
+  },
+  "examMode": {
+    "header": {
+      "title": "Klausurenmodus: Umfassende Bewertung der Studierenden",
+      "subtitle": "Integrierte Plagiatskontrollen, Testläufe und studentische Überprüfungen"
+    },
+    "imageAlt": "Artemis Klausuren-Dashboard",
+    "statsImageAlt": "Artemis Klausurstatistiken",
+    "assessmentImageAlt": "Artemis Klausursbewertung",
+    "description": "Der Klausurmodus von Artemis ermöglicht es Dozenten, einzigartige Klausuren für jeden Studenten zu erstellen, die eine Vielzahl von Übungstypen umfassen. Testläufe sorgen für einen reibungslosen Klausurablauf, während integrierte Plagiatskontrollen die akademische Integrität wahren. Die Bewertung wird über das Assessment Dashboard vereinfacht, und die Studierenden können ihre Ergebnisse leicht überprüfen und anfechten.",
+    "statistics": {
+      "title": "Statistiken",
+      "description": "Sie können das Klausurergebnis anhand der von Artemis erstellten Statistiken bewerten.",
+      "usingMetrics": "Überprüfen Sie die Leistung der Studierenden mit verschiedenen Metriken wie Durchschnitt, Median und Standardabweichung.",
+      "studentFeedback": "Bewerten Sie die wahrgenommene Schwierigkeit jeder Übung durch die Studierenden, um zukünftige Klausuren zu verbessern."
+    },
+    "automaticAssessment": {
+      "title": "Von maschinellem Lernen unterstützte Bewertung",
+      "description": "Artemis unterstützt die Korrektur mit automatischen und halbautomatischen Bewertungen für verschiedene Übungstypen.",
+      "automate": "Für Quizaufgaben können Sie die richtige Lösung im Voraus festlegen. Nach Durchführung einer Klausur können Sie Artemis auffordern, alle Einsendungen automatisch auszuwerten.",
+      "quality": "Für Text- und Modellierungsaufgaben können Sie automatische Korrekturvorschläge aktivieren. Artemis verwendet maschinelles Lernen, um ähnliche Elemente in den Einsendungen zu identifizieren."
+    }
+  },
+  "cta": {
+    "title": "Revolutionieren Sie Ihre Lehre",
+    "subtitle": "Transformieren Sie Ihre Lehrveranstaltungen und bereichern Sie die Studierendenerfahrung mit Artemis noch heute.",
+    "button": "Jetzt starten"
+  },
+  "team": {
+    "website": "Website",
+    "title": "Unser Team",
+    "subtitle": "Artemis wird von einem Team leidenschaftlicher Studenten und Forscher an der Technischen Universität München entwickelt.",
+    "management": {
+      "title": "Projektmanagement",
+      "description": "Halten das Projekt auf Kurs."
+    },
+    "developers": {
+      "title": "Entwickler",
+      "description": "Diejenigen, die die Magie geschehen lassen."
+    }
+  },
+  "contact": {
+    "title": "Kontaktieren Sie uns",
+    "subtitle": "Wir würden gerne von Ihnen hören!",
+    "email": "Senden Sie uns eine E-Mail an",
+    "bug": "Einen Fehler gefunden? Melden Sie ihn auf",
+    "feature": "Haben Sie einen Funktionswunsch? Reichen Sie ihn ein auf"
+  },
+
+  "footer": {
+    "madeby": "Erstellet von",
+    "copyright": "Technische Universität München. Alle Rechte vorbehalten.",
+    "imprint": "Impressum"
+  },
+  "404": "Seite nicht gefunden",
+  "meta": {
+    "description": "Interaktives Lernen mit individuellem Feedback"
+  }
+}

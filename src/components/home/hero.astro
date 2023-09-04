@@ -1,0 +1,79 @@
+---
+import { Picture } from "@astrojs/image/components";
+import screenImage from "assets/screen.png";
+import Link from "@components/ui/link.astro";
+import Icon from "astro-icon";
+import { l, t } from "astro-i18n";
+import Container from "../container.astro";
+---
+
+<style>
+    .screen-image {
+        border-radius: 5px;
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 4px 24px rgba(0, 0, 0, 0.09);
+    }
+
+    main > * {
+    }
+
+    @keyframes slide-in {
+        from {
+            transform: translateY(1rem);
+        }
+        to {
+            transform: translateY(0);
+        }
+    }
+</style>
+
+<Container>
+  <main
+    class="grid place-items-center pt-16 pb-8 md:pt-12 md:pb-24 text-center">
+    <div>
+      <h1
+        class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter text-center">
+        {t("hero.title")}<br />
+        {t("hero.title2")}
+      </h1>
+      <p class="text-lg mt-4 text-slate-300 delay-75">
+        {t("hero.description")}
+      </p>
+      <p class="text-lg mt-8 text-slate-300 text-center delay-100">
+        {t("hero.subtitle")}
+      </p>
+      <div class="mt-6 flex justify-center sm:flex-row gap-3 delay-150">
+        <Link
+          href="#"
+          href="https://github.com/ls1intum/Artemis"
+          target="_blank"
+          class="flex gap-1 items-center justify-center"
+          rel="noopener">
+          <Icon class="text-black w-6 h-6 me-2" name="bx:bxl-github" />
+          {t("hero.github")}
+        </Link>
+        <Link
+          size="lg"
+          lstyle="inverted"
+          rel="noopener"
+          href={l("contact")}
+          class="flex gap-1 items-center justify-center"
+          target="_blank">
+          {t("hero.getInTouch")}
+        </Link>
+      </div>
+    </div>
+    <div class="py-6 block mt-12">
+      <Picture
+        src={screenImage}
+        placeholder="dominant-color"
+        alt="Artemis Exercise View"
+        widths={[1920]}
+        aspectRatio="16:9"
+        sizes="(max-width: 800px) 100vw, 80%"
+        loading="eager"
+        format="avif"
+        class="screen-image"
+      />
+    </div>
+  </main>
+</Container>

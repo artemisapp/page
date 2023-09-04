@@ -3,9 +3,7 @@ interface Props {
   [x: string]: any;
 }
 
-const {
-  ...rest
-} = Astro.props;
+const { ...rest } = Astro.props;
 
 const id = rest.id ? rest.id : "gb-" + Math.random().toString(36).slice(2, 11);
 ---
@@ -19,13 +17,16 @@ const id = rest.id ? rest.id : "gb-" + Math.random().toString(36).slice(2, 11);
   const el = document.getElementById(id);
 
   const handler = () => {
-    const newVisible = el.getBoundingClientRect().top <= window.innerHeight * 0.5;
+    const newVisible =
+      el.getBoundingClientRect().top <= window.innerHeight * 0.5;
     if (newVisible !== oldVisible) {
       oldVisible = newVisible;
       el.classList.toggle("visible", newVisible);
     }
   };
 
-  ["DOMContentLoaded", "load", "scroll", "resize"].forEach(evt => addEventListener(evt, handler, false));
+  ["DOMContentLoaded", "load", "scroll", "resize"].forEach((evt) =>
+    addEventListener(evt, handler, false),
+  );
   handler();
 </script>

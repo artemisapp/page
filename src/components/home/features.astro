@@ -16,40 +16,40 @@ const iconArray = [
   "bx:bxs-message",
   "bx:bxs-check-circle",
   "ph:path",
-  "raphael:opensource"
+  "raphael:opensource",
 ];
 
 for (let i = 0; i < iconArray.length; i++) {
   features.push({
     title: t(`features.list.${i}.title`),
     description: t(`features.list.${i}.description`),
-    icon: iconArray[i]
+    icon: iconArray[i],
   });
 }
 ---
 
 <style>
-    .feature {
-        transition: all 0.5s ease-in-out;
-        opacity: 0;
-        transform: translateY(20px);
-    }
+  .feature {
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    transform: translateY(20px);
+  }
 
-    .f-wrapper.visible .feature {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  .f-wrapper.visible .feature {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
-    .f-header {
-        transition: all 0.5s ease-in-out;
-        opacity: 0.5;
-        transform: translateY(20px);
-    }
+  .f-header {
+    transition: all 0.5s ease-in-out;
+    opacity: 0.5;
+    transform: translateY(20px);
+  }
 
-    .f-wrapper.visible .f-header {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  .f-wrapper.visible .f-header {
+    opacity: 1;
+    transform: translateY(0);
+  }
 </style>
 
 <OnVisibleWrapper class="f-wrapper">
@@ -67,13 +67,17 @@ for (let i = 0; i < iconArray.length; i++) {
     <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16 features">
       {
         features.map((item, i) => (
-          <div class="flex gap-4 items-start feature" style={"transition-delay: " + (Math.floor(i / 3) * 0.3) + "s"}>
+          <div
+            class="flex gap-4 items-start feature"
+            style={"transition-delay: " + Math.floor(i / 3) * 0.3 + "s"}>
             <div class="mt-1 rounded-full w-8 h-8 shrink-0">
               <Icon class="text-white" name={item.icon} />
             </div>
             <div>
               <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
-              <p class="text-slate-300 mt-2 leading-relaxed">{item.description}</p>
+              <p class="text-slate-300 mt-2 leading-relaxed">
+                {item.description}
+              </p>
             </div>
           </div>
         ))

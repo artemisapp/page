@@ -4,51 +4,64 @@ interface Props {
   color?: string;
 }
 
-const {
-  color = "var(--topcl)"
-} = Astro.props;
+const { color = "var(--topcl)" } = Astro.props;
 ---
+
 <style>
-    .gb-wrapper {
-        --glow-color: var(--topcl);
-        height: 0;
-        width: 100%;
-        margin-bottom: 2rem;
-        position: relative;
-    }
+  .gb-wrapper {
+    --glow-color: var(--topcl);
+    height: 0;
+    width: 100%;
+    margin-bottom: 2rem;
+    position: relative;
+  }
 
-    .gb-inner {
-        height: 3000px;
-        width: 100%;
-        position: absolute;
-        top: -1500px;
-        z-index: -1;
-        display: flex;
-        mask-image: linear-gradient(to bottom, transparent 1480px, black 50%, black 70%, transparent 90%);
+  .gb-inner {
+    height: 3000px;
+    width: 100%;
+    position: absolute;
+    top: -1500px;
+    z-index: -1;
+    display: flex;
+    mask-image: linear-gradient(
+      to bottom,
+      transparent 1480px,
+      black 50%,
+      black 70%,
+      transparent 90%
+    );
 
-        transition: all 0.7s ease-in-out;
-        opacity: 30%;
-    }
+    transition: all 0.7s ease-in-out;
+    opacity: 30%;
+  }
 
-    .gb-glower {
-        height: 100%;
-        width: 50%;
-    }
+  .gb-glower {
+    height: 100%;
+    width: 50%;
+  }
 
-    .gb-glower.gb-a {
-        left: 0;
-        background: conic-gradient(from 90deg at calc(100% - 200px) 50%, var(--glow-color) 0%, transparent 50%);
-    }
+  .gb-glower.gb-a {
+    left: 0;
+    background: conic-gradient(
+      from 90deg at calc(100% - 200px) 50%,
+      var(--glow-color) 0%,
+      transparent 50%
+    );
+  }
 
-    .gb-glower.gb-b {
-        right: 0;
-        background: conic-gradient(from 270deg at 200px 50%, var(--glow-color), transparent 50%);
-        transform: rotateX(180deg);
-    }
+  .gb-glower.gb-b {
+    right: 0;
+    background: conic-gradient(
+      from 270deg at 200px 50%,
+      var(--glow-color),
+      transparent 50%
+    );
+    transform: rotateX(180deg);
+  }
 
-    .gb-wrapper.visible .gb-inner {
-        opacity: 100%;
-    }
+  .gb-wrapper.visible .gb-inner {
+    opacity: 100%;
+  }
 </style>
 
 <OnVisibleWrapper class="gb-wrapper" style={"--glow-color:" + color}>
@@ -57,5 +70,3 @@ const {
     <div class="gb-glower gb-b"></div>
   </div>
 </OnVisibleWrapper>
-
-

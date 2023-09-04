@@ -5,14 +5,18 @@ import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import { t } from "astro-i18n";
 
-const response = await fetch("https://artemis.cit.tum.de/public/content/about-us.json", {
-  headers: {
-    Accept: "application/json"
-  }
-});
+const response = await fetch(
+  "https://artemis.cit.tum.de/public/content/about-us.json",
+  {
+    headers: {
+      Accept: "application/json",
+    },
+  },
+);
 const jsonResponse = await response.json();
-const developers = jsonResponse.contributors
-  .sort((a, b) => (a.sortBy ?? a.fullName).localeCompare(b.sortBy ?? b.fullName));
+const developers = jsonResponse.contributors.sort((a, b) =>
+  (a.sortBy ?? a.fullName).localeCompare(b.sortBy ?? b.fullName),
+);
 const maintainers = jsonResponse.projectManagers;
 ---
 
@@ -31,13 +35,16 @@ const maintainers = jsonResponse.projectManagers;
         {t("team.management.description")}
       </p>
     </div>
-    <div class="grid lg:grid-cols-4 sm:grid-cols-2 gap-10 mx-auto max-w-8xl mt-12">
+    <div
+      class="grid lg:grid-cols-4 sm:grid-cols-2 gap-10 mx-auto max-w-8xl mt-12">
       {
         maintainers.map((teamMemberEntry) => (
           <div class="group">
             <div class="w-full aspect-square">
               <Picture
-                src={"https://artemis.cit.tum.de/" + teamMemberEntry.photoDirectory}
+                src={
+                  "https://artemis.cit.tum.de/" + teamMemberEntry.photoDirectory
+                }
                 alt={teamMemberEntry.fullName}
                 sizes="(max-width: 800px) 100vw, 400px"
                 widths={[200, 400]}
@@ -50,9 +57,7 @@ const maintainers = jsonResponse.projectManagers;
             </div>
 
             <div class="mt-4 text-center">
-              <h2 class="text-lg text-gray-300">
-                {teamMemberEntry.fullName}
-              </h2>
+              <h2 class="text-lg text-gray-300">{teamMemberEntry.fullName}</h2>
               <h3 class="text-sm text-blue-500">
                 <a href={teamMemberEntry.website}>{t("team.website")}</a>
               </h3>
@@ -69,14 +74,16 @@ const maintainers = jsonResponse.projectManagers;
         {t("team.developers.description")}
       </p>
     </div>
-    <div class="grid xl:grid-cols-6 md:grid-cols-3 grid-cols-2 gap-10 mx-auto max-w-8xl mt-12">
-
+    <div
+      class="grid xl:grid-cols-6 md:grid-cols-3 grid-cols-2 gap-10 mx-auto max-w-8xl mt-12">
       {
         developers.map((teamMemberEntry) => (
           <div class="group">
             <div class="w-full aspect-square">
               <Picture
-                src={"https://artemis.cit.tum.de/" + teamMemberEntry.photoDirectory}
+                src={
+                  "https://artemis.cit.tum.de/" + teamMemberEntry.photoDirectory
+                }
                 alt={teamMemberEntry.fullName}
                 widths={[100, 200, 400]}
                 aspectRatio="1:1"

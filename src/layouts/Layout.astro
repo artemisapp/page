@@ -14,7 +14,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
 const resolvedImageWithDomain = new URL(
   "/opengraph.png",
-  Astro.site
+  Astro.site,
 ).toString();
 
 const { title } = Astro.props;
@@ -25,39 +25,38 @@ const makeTitle = title
 ---
 
 <style is:global>
-    /* Improve Page speed */
-    /* https://css-tricks.com/almanac/properties/c/content-visibility/ */
-    img {
-        content-visibility: auto;
-    }
+  /* Improve Page speed */
+  /* https://css-tricks.com/almanac/properties/c/content-visibility/ */
+  img {
+    content-visibility: auto;
+  }
 
-    html {
-        scroll-behavior: smooth;
-        color: white;
-        min-height: 100vh;
-        --topclx: #353d47;
-        --topcl: #2F6FB1;
-        --bottomclx: #181a18;
-        --bottomcl: #03131c;
-        background: black;
-    }
+  html {
+    scroll-behavior: smooth;
+    color: white;
+    min-height: 100vh;
+    --topclx: #353d47;
+    --topcl: #2f6fb1;
+    --bottomclx: #181a18;
+    --bottomcl: #03131c;
+    background: black;
+  }
 
-    h1 {
-        --hcol: rgb(255, 255, 255);
-        --hcolt: rgb(255, 255, 255, 0.38);
-        background: radial-gradient(circle at top, var(--hcol) 30%, var(--hcolt));
-        box-decoration-break: clone;
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
-        padding-bottom: 4px;
-    }
+  h1 {
+    --hcol: rgb(255, 255, 255);
+    --hcolt: rgb(255, 255, 255, 0.38);
+    background: radial-gradient(circle at top, var(--hcol) 30%, var(--hcolt));
+    box-decoration-break: clone;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    padding-bottom: 4px;
+  }
 
-    body {
-        min-height: 100vh;
-    }
+  body {
+    min-height: 100vh;
+  }
 </style>
 
-<!DOCTYPE html>
 <html lang="en">
   <!--suppress HtmlRequiredTitleElement -->
   <head>
@@ -72,18 +71,18 @@ const makeTitle = title
       description="Artemis is a platform for interactive learning with individual feedback."
       canonical={canonicalURL}
       twitter={{
-        card: "summary_large_image"
+        card: "summary_large_image",
       }}
       openGraph={{
         basic: {
           url: canonicalURL,
           type: "website",
           title: `Artemis - Interactive Learning with Individual Feedback`,
-          image: resolvedImageWithDomain
+          image: resolvedImageWithDomain,
         },
         image: {
-          alt: "Artemis - Interactive Learning with Individual Feedback"
-        }
+          alt: "Artemis - Interactive Learning with Individual Feedback",
+        },
       }}
     />
   </head>

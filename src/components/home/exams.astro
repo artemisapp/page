@@ -10,20 +10,20 @@ import { t } from "astro-i18n";
 ---
 
 <style>
-    .exam-wrapper .exam-content > * {
-        transition: all 0.5s ease-in-out;
-        opacity: 0.5;
-        transform: translateY(20px);
-    }
+  .exam-wrapper .exam-content > * {
+    transition: all 0.5s ease-in-out;
+    opacity: 0.5;
+    transform: translateY(20px);
+  }
 
-    .exam-wrapper.visible .exam-content > * {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  .exam-wrapper.visible .exam-content > * {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
-    .exam-img {
-        mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-    }
+  .exam-img {
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  }
 </style>
 
 <OnVisibleWrapper class="exam-wrapper mt-24" id="exams">

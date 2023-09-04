@@ -11,7 +11,8 @@
 		"astro": "astro",
 		"i18n:install": "astro-i18n install",
 		"i18n:sync": "astro-i18n sync",
-		"i18n:extract:keys": "astro-i18n extract:keys"
+		"i18n:extract:keys": "astro-i18n extract:keys",
+		"prettier": "prettier --write \"src/**/*.astro\""
 	},
 	"dependencies": {
 		"@astrojs/image": "^0.17.2",
@@ -27,5 +28,9 @@
 		"astro-seo": "^0.7.5",
 		"sharp": "^0.32.4",
 		"tailwindcss": "^3.0.24"
+	},
+	"devDependencies": {
+		"prettier": "^3.0.3",
+		"prettier-plugin-astro": "^0.12.0"
 	}
 }

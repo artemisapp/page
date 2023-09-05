@@ -10,20 +10,20 @@ import { t } from "astro-i18n";
 ---
 
 <style>
-  .prog-ex-wrapper .pgex-cnt > * {
-    transition: all 0.5s ease-in-out;
-    opacity: 0.5;
-    transform: translateY(20px);
-  }
+    .prog-ex-wrapper .pgex-cnt > * {
+        transition: all 0.5s ease-in-out;
+        opacity: 0.5;
+        transform: translateY(20px);
+    }
 
-  .prog-ex-wrapper.visible .pgex-cnt > * {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    .prog-ex-wrapper.visible .pgex-cnt > * {
+        opacity: 1;
+        transform: translateY(0);
+    }
 
-  .pg-img {
-    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-  }
+    .pg-img {
+        mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    }
 </style>
 
 <OnVisibleWrapper class="prog-ex-wrapper mt-24" id="programming-exercises">
@@ -78,9 +78,15 @@ import { t } from "astro-i18n";
         <div class="flex justify-between items-center ps-4 pe-4">
           <h2 class="font-bold">Atlassian Suite</h2>
           <div class="flex h-8 lg:h-12 gap-8">
-            <Icon name="simple-icons:jira" class="h-8 lg:h-12" />
-            <Icon name="simple-icons:bamboo" class="h-8 lg:h-12" />
-            <Icon name="simple-icons:bitbucket" class="h-8 lg:h-12" />
+            <a href="https://www.atlassian.com/de/software/jira">
+              <Icon name="simple-icons:jira" class="h-8 lg:h-12" title="Jira" />
+            </a>
+            <a href="https://www.atlassian.com/de/software/bamboo">
+              <Icon name="simple-icons:bamboo" class="h-8 lg:h-12" title="Bamboo" />
+            </a>
+            <a href="https://www.atlassian.com/de/software/bitbucket">
+              <Icon name="simple-icons:bitbucket" class="h-8 lg:h-12" title="Bitbucket" />
+            </a>
             <Picture
               src={logoImage}
               alt="Artemis"
@@ -93,8 +99,12 @@ import { t } from "astro-i18n";
         <div class="flex justify-between items-center ps-4 pe-4">
           <h2 class="font-bold">GitLab + Jenkins</h2>
           <div class="flex h-8 lg:h-12 gap-8">
-            <Icon name="simple-icons:jenkins" class="h-8 lg:h-12" />
-            <Icon name="simple-icons:gitlab" class="h-8 lg:h-12" />
+            <a href="https://www.jenkins.io">
+              <Icon name="simple-icons:jenkins" class="h-8 lg:h-12" title="Jenkins" />
+            </a>
+            <a href="https://gitlab.com">
+              <Icon name="simple-icons:gitlab" class="h-8 lg:h-12" title="GitLab" />
+            </a>
             <Picture
               src={logoImage}
               alt="Artemis"
@@ -107,7 +117,9 @@ import { t } from "astro-i18n";
         <div class="flex justify-between items-center ps-4 pe-4">
           <h2 class="font-bold">GitLab CI</h2>
           <div class="flex h-8 lg:h-12 gap-8">
-            <Icon name="simple-icons:gitlab" class="h-8 lg:h-12" />
+            <a href="https://gitlab.com">
+              <Icon name="simple-icons:gitlab" class="h-8 lg:h-12" title="GitLab" />
+            </a>
             <Picture
               src={logoImage}
               alt="Artemis"
@@ -137,18 +149,24 @@ import { t } from "astro-i18n";
     </h2>
     <div class="w-full mt-8 gap-16 flex flex-col lg:flex-row">
       <div class="flex gap-16 flex-1 items-center justify-center">
-        <Icon class="h-12 md:h-24" name="simple-icons:pytest" />
-        <Icon class="h-12 md:h-24" name="simple-icons:junit5" />
-        <div class="text-4xl font-bold">ARES</div>
+        <a href="https://pytest.org">
+          <Icon class="h-12 md:h-24" name="simple-icons:pytest" />
+        </a>
+        <a href="https://junit.org">
+          <Icon class="h-12 md:h-24" name="simple-icons:junit5" />
+        </a>
+        <a href="https://github.com/ls1intum/Ares" class="text-4xl font-bold">ARES</a>
       </div>
       <div class="flex-1 flex flex-col gap-4">
         <p class="text-slate-200 leading-relaxed">
           {t("programmingExercises.assessment.description")}
         </p>
         <p class="text-slate-200">
-          {t("programmingExercises.assessment.automate")}
+          {t("programmingExercises.assessment.security0")}
+          <a href="https://github.com/ls1intum/Ares" class="text-blue-400 underline">Ares</a>
+          {t("programmingExercises.assessment.security1")}
         </p>
-        <p class="text-slate-200 mt-4">
+        <p class="text-slate-200">
           {t("programmingExercises.assessment.scale")}
         </p>
       </div>
@@ -161,13 +179,27 @@ import { t } from "astro-i18n";
     </h2>
     <div
       class="flex gap-8 md:gap-20 items-center justify-center mt-10 flex-wrap">
-      <Icon class="h-8 md:h-12" name="simple-icons:java" />
-      <Icon class="h-8 md:h-12" name="simple-icons:swift" />
-      <Icon class="h-8 md:h-12" name="simple-icons:kotlin" />
-      <Icon class="h-8 md:h-12" name="simple-icons:python" />
-      <Icon class="h-8 md:h-14" name="simple-icons:c" />
-      <Icon class="h-8 md:h-16" name="simple-icons:ocaml" />
-      <Icon class="h-8 md:h-16" name="simple-icons:haskell" />
+      <a href="https://www.oracle.com/java/" target="_blank">
+        <Icon class="h-8 md:h-12" name="simple-icons:java" title="Java" />
+      </a>
+      <a href="https://developer.apple.com/swift/" target="_blank">
+        <Icon class="h-8 md:h-12" name="simple-icons:swift" title="Swift" />
+      </a>
+      <a href="https://kotlinlang.org/" target="_blank">
+        <Icon class="h-8 md:h-12" name="simple-icons:kotlin" title="Kotlin" />
+      </a>
+      <a href="https://www.python.org/" target="_blank">
+        <Icon class="h-8 md:h-12" name="simple-icons:python" title="Python" />
+      </a>
+      <a href="https://www.iso.org/standard/74528.html" target="_blank">
+        <Icon class="h-8 md:h-14" name="simple-icons:c" title="C" />
+      </a>
+      <a href="https://ocaml.org/" target="_blank">
+        <Icon class="h-8 md:h-16" name="simple-icons:ocaml" title="OCaml" />
+      </a>
+      <a href="https://www.haskell.org/" target="_blank">
+        <Icon class="h-8 md:h-16" name="simple-icons:haskell" title="Haskell" />
+      </a>
     </div>
   </div>
 </OnVisibleWrapper>

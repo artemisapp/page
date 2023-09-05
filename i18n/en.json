@@ -12,7 +12,8 @@
     "description": "Artemis brings interactive learning to life with instant, individual feedback on programming exercises, quizzes, modeling tasks, and more. Offering customization for instructors and real-time collaboration for students, this platform bridges creativity and education. Embrace a new era of engaging, adaptive learning with Artemis, where innovation meets inclusivity.",
     "subtitle": "Artemis is open-source. Meet the the future of educational excellence.",
     "github": "View on GitHub",
-    "getInTouch": "Get in touch"
+    "getInTouch": "Get in touch",
+    "usedBy": "Trusted by Premier Academic Institutions and Educators"
   },
   "features": {
     "title": "Innovative Technology Meets Educational Research",
@@ -66,14 +67,15 @@
     "integration": {
       "title": "Seamless Integration with Your CI/CD Tools",
       "description": "Artemis integrates effortlessly with popular CI/CD platforms to complement your existing workflow.",
-      "platforms": "Choose from a variety of supported platforms, including GitHub, Bitbucket, GitLab, Jira, Bamboo, and Jenkins.",
+      "platforms": "Choose from a variety of supported platforms, including Bitbucket, GitLab, Jira, Bamboo, and Jenkins.",
       "standalone": "Or just use Artemis as a standalone solution - it's up to you!"
     },
     "assessment": {
       "title": "Automated Assessment",
       "description": "Students receive instant, automated, individual feedback through test results, static code analysis, and AI recommendations.",
-      "automate": "Forget about manually grading hundreds of submissions - Artemis gives you the tools to automate the process.",
-      "scale": "Scale your course to thousands of students without sacrificing quality."
+      "security0": "Artemis securely executes student code in isolated Docker containers, ensuring that the system is protected from malicious code. For Java, we're leveraging our",
+      "security1": "testing framework to further control the behavior of student code.",
+      "scale": "Forget about manually grading hundreds of submissions - Artemis gives you the tools to automate the process. Scale your course to thousands of students without sacrificing quality."
     },
     "programmingLanguages": "Works with all programming languages, such as"
   },

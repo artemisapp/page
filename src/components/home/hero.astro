@@ -5,6 +5,37 @@ import Link from "@components/ui/link.astro";
 import Icon from "astro-icon";
 import { l, t } from "astro-i18n";
 import Container from "../container.astro";
+
+import mariaTheresiaLogo from 'assets/user-logos/maria-theresia.png';
+import hnnLogo from 'assets/user-logos/Hnn_logo.svg.png';
+import hmLogo from 'assets/user-logos/hm.png';
+import dresdenLogo from 'assets/user-logos/dresden.png';
+import kitLogo from 'assets/user-logos/KIT-Logo.png';
+import uniPassauLogo from 'assets/user-logos/uni_1200dpi_sw_gross_Grau_Weiss.png';
+import tuWienLogo from 'assets/user-logos/technische-universitat-wien-logo-E7B527B95B-seeklogo.com.png';
+import uniStuttgartLogo from 'assets/user-logos/unistuttgart_logo_englisch_cmyk_invertiert.png';
+import aauLogo from 'assets/user-logos/aau-logo-300x110-300x110without-backgroung-white-1.png';
+import jkuLogo from 'assets/user-logos/jku.png';
+import uniSbgLogo from 'assets/user-logos/uni-sbg-logo-white.png';
+import logoUibk from 'assets/user-logos/logo-uibk.svg';
+import tumLogo from 'assets/user-logos/tum.png';
+
+const universities = [
+  { href: "https://www.tum.de/", title: "Technical University of Munich", logo: tumLogo },
+  { href: "https://www.hm.edu/", title: "Hochschule München", logo: hmLogo },
+  { href: "https://www.uni-passau.de/", title: "University of Passau", logo: uniPassauLogo },
+  { href: "https://www.uni-stuttgart.de/", title: "University of Stuttgart", logo: uniStuttgartLogo },
+  { href: "https://www.kit.edu/", title: "Karlsruhe Institute of Technology", logo: kitLogo },
+  { href: "https://tu-dresden.de/", title: "Technische Universität Dresden", logo: dresdenLogo },
+  { href: "https://www.tuwien.at/", title: "TU Wien", logo: tuWienLogo },
+  { href: "https://www.aau.at/", title: "AAU Klagenfurt", logo: aauLogo },
+  { href: "https://www.jku.at/", title: "JKU Linz", logo: jkuLogo },
+  { href: "https://www.uni-salzburg.at/", title: "Uni Salzburg", logo: uniSbgLogo },
+  { href: "https://www.uibk.ac.at/", title: "LFU Innsbruck", logo: logoUibk },
+  { href: "https://mtg-muenchen.de", title: "Maria-Theresia-Gymnasium München", logo: mariaTheresiaLogo },
+  { href: "https://www.hs-heilbronn.de/", title: "Hochschule Heilbronn", logo: hnnLogo }
+];
+
 ---
 
 <style>
@@ -16,6 +47,11 @@ import Container from "../container.astro";
   }
 
   main > * {
+  }
+
+  .uni-logo-link {
+      max-height: 50px;
+      height: 40px;
   }
 
   @keyframes slide-in {
@@ -78,4 +114,16 @@ import Container from "../container.astro";
       />
     </div>
   </main>
+  <div class="mt-12">
+    <h2 class="text-center text-slate-300 text-xl font-semibold">
+      {t("hero.usedBy")}
+    </h2>
+    <div class="flex gap-8 md:gap-20 items-center justify-center mt-10 flex-wrap pb-24">
+      { universities.map((uni) => (
+        <a href={uni.href} title={uni.title} class="uni-logo-link">
+          <Picture src={uni.logo} placeholder="dominant-color" widths={[400]} loading="eager" format="avif" style={{ maxHeight: '100%' }} />
+        </a>
+      )) }
+    </div>
+  </div>
 </Container>

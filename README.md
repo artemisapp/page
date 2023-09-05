@@ -21,8 +21,8 @@ git clone https://github.com/artemisapp/artemisapp.github.io.git
 pnpm install
 ```
 
-> [!PNPM not installed?]  
-> Read how to install PNPM [here](https://pnpm.io/installation).
+> [!NOTE]  
+> PNPM not installed? Read how to install PNPM [here](https://pnpm.io/installation).
 
 ### 3. Start development Server
 

@@ -10,7 +10,7 @@ Landing page for [Artemis](https://github.com/ls1intum/Artemis) using [Astro](ht
 Clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/ls1intum/Artemis-LandingPage.git
+git clone https://github.com/artemisapp/artemisapp.github.io.git
 ```
 
 ```bash

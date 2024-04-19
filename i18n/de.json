@@ -67,7 +67,7 @@
     "integration": {
       "title": "Nahtlose Integration mit Ihren CI/CD-Tools",
       "description": "Artemis integriert sich mühelos in beliebte CI/CD-Plattformen, um Ihren bestehenden Workflow zu ergänzen.",
-      "platforms": "Wähle aus einer Vielzahl von unterstützten Plattformen, einschließlich Bitbucket, GitLab, Jira, Bamboo und Jenkins.",
+      "platforms": "Wähle aus einer Vielzahl von unterstützten Plattformen, einschließlich GitLab und Jenkins.",
       "standalone": "Oder nutze einfach Artemis als eigenständige Lösung - es liegt an dir!"
     },
     "assessment": {
